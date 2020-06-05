@@ -1,12 +1,13 @@
 <div class="container">
-<div class="title"<h1>Todo Rails App :</h1></div>
-<div class="content">
+<div class="content"><h1 class="title">Todo Rails App :</h1></div>
+<div>
 <% @todos.each do |todo| %>
-    <h2><%= link_to todo.title, todo_path(todo.id) %></h2>
-    <li>
+    <h2><%= link_to todo.title, todo_path(todo.id), :class => "text-secondary" %></h2>
+    <li class="description mb-3">
+        <%= todo.id %> -
         <%= todo.description %>
-        <%= link_to "edit", edit_todo_path(todo[:id]) %>
-        <%= link_to "delete", todo, method: :delete, data: { confirm: "You sure?" } %>
+        <button class="btn btn-outline-dark btn-lg"><%= link_to "edit", edit_todo_path(todo[:id]), :class => "text-info" %></button>
+        <button class="btn btn-outline-danger btn-lg"><%= link_to "delete", todo, method: :delete, data: { confirm: "You sure?" }, :class => "text-info" %>
     </li>
 <% end %><br><br>
 

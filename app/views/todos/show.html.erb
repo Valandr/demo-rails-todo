@@ -1,5 +1,10 @@
-<h1>Todo Show Page</h1>
+<div class="container">
+<h1 class="title">Todo Show Page</h1>
+<div class="show">
 <p>Titre: <%= @todo["title"] %>
-<p>Description: <%= @todo["description"] %>
-
+<p class="mb-3">Description: <%= @todo["description"] %>
+</div>
+<div class="back">
 <%= link_to "Back To Todo List", todos_path %>
+</div>
+</div>

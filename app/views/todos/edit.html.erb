@@ -1,8 +1,12 @@
-<h1> Edit your Todo </h1>
+<div class="container">
+<h1 class="title"> Edit your Todo </h1>
+<div class="form">
 <%= form_for @todo do |f| %>
     <%= label_tag(:title, "Title:") %>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, :class => "mb-5" %>
     <%= label_tag(:description, "Description:") %>
     <%= f.text_area :description %><br>
     <%= f.submit "Update" %>
 <% end %>
+</div>
+</div>
